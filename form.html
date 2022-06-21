@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Form Validation</title>
+        <style>
+            .errortxt{
+                color:red;
+                display: none;
+            }
+            .sucesstxt{
+                color: green;
+            }
+        </style>
+        <script>
+            function validateregform(){
+                var fname = document.getElementById("firstname").value;
+                var lname = document.getElementById("lastname").value;
+                var rank = document.getElementById("rank").value;
+                var email = document.getElementById("emailaddress").value;
+                var emailfilter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                var password = document.getElementById("password").value;
+                var conformpassword = document.getElementById("conformpassword").value;
+                var city = document.forms["registrationform"]["city"].value;
+                var age1 = document.forms["registrationform"]["age"][0].checked;
+                var age2 = document.forms["registrationform"]["age"][1].checked;
+                var age3 = document.forms["registrationform"]["age"][2].checked;
+                var agreeterms =document.forms["registrationform"]["agreeterms"].checked; 
+
+
+                if(fname != "" && fname.length>=5){
+                    document.getElementById("fnameerror").style.display = "none";
+                }else {
+                    document.getElementById("fnameerror").style.display="block";
+                }
+
+                if(lname.length >=4 && lname.length <=10){
+                    document.getElementById("lnameerror").style.display = "none";
+                }else{
+                    document.getElementById("lnameerror").style.display = "block";
+                }
+
+                if(rank !="" && !isNaN(rank) && rank > 50){
+                    document.getElementById("rankerror").style.display = "none";
+                }else{
+                    document.getElementById("rankerror").style.display = "block";
+                }
+                    
+                if(email !="" || !emailfilter.text(email)){
+
+                   document.getElementById("emailerror").style.display = "block";
+                }else{
+                    document.getElementById("emailerror").style.display = "none";
+                }
+                if(password ==""){
+                    document.getElementById("passworderror").style.display = "block";
+                }else{
+                    document.getElementById("passworderror").style.display = "none";
+                }
+                if(conformpassword ==""){
+                    document.getElementById("conformpassworderror").style.display = "block";
+                }else{
+                    document.getElementById("conformpassworderror").style.display = "none";
+                }
+                if(password == conformpassword){
+                    document.getElementById("passwordmismatcherror").style.display ="none";
+                }else{
+                    document.getElementById("passwordmismatcherror").style.display ="block";
+                }
+                if(city ==""){
+                    document.getElementById("cityerror").style.display="block";
+
+                }else{
+                    document.getElementById("cityerror").style.display="none";
+                }
+
+                if(age1 || age2|| age3){
+                    document.getElementById("ageerror").style.display="none";
+                }else{
+                    document.getElementById("ageerror").style.display="block";
+                }
+                if(agreeterms){
+                    document.getElementById("agreetermserror").style.display="none";
+                }else{
+                    document.getElementById("agreetermserror").style.display="block";
+                }
+
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="registrationform" method="post" action="file:///C:/Users/Dell/Desktop/Ecommerce%20Project/Home.html" onsubmit= "validateregform()">
+            <label>First Name:</label>
+            <input type="text" name="firstname" id="firstname" oninput="validateregform()"/>
+            <span id= "fnameerror" class="errortxt">
+                Please enter firstname
+            </span><br><br>
+            <!-- <span id="fnamesucces" class="sucesstxt">Ok</span><br><br> -->
+            
+            <label>Last Name:</label>
+            <input type="text" name="lastname" id="lastname" oninput="validateregform()"/><br>
+            <span id= "lnameerror" class="errortxt">
+                Please enter lastname min 4 and max 10 char
+            </span><br><br>
+
+
+       
+
+            <label>Email</label>
+            <input type="email" name="emailaddress" id="emailaddress" oninput="validateregform()"/><br>
+            <span id= "emailerror" class="errortxt">
+                Please enter valid email
+            </span><br><br>
+            <label>Password:</label>
+            <input type="password" name="password" id="password" oninput="validateregform()"/>
+            <span id= "passworderror" class="errortxt">
+                Please enter password
+            </span><br><br>
+            <label> Conform Password:</label>
+            <input type="password" name="conformpassword" id="conformpassword" oninput="validateregform()"/>
+            <span id= "conformpassworderror" class="errortxt">
+                Please enter conform password
+            </span><br><br>
+
+            <span id="passwordmismatcherror" class="errortxt">Password Mismatch</span>
+            <select id="city" id="city" name="city" onclick="validateregform()"><br>
+                <option value="">Choose City</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Vizag">Vizag</option>
+                <option value="Rajahmundry">Rajahmundry</option>
+                <option value="Kakinada">Kakinada</option>
+                <option value="Tirupathi">Tirupathi</option>
+                <option value="Vijaywada">Vijaywada</option>
+            </select>
+            <span id="cityerror" class="errortxt">
+                please choose city
+            </span><br><br>
+            <label>Please choose your age</label>
+            <input type="radio" id="age1" name="age" value="30" onclick="validateregform()"/>
+            <label for="age1">0-30</label>
+            <input type="radio" id="age2" name="age" value="60" onclick="validateregform()"/>
+            <label for="age2">30-60</label>
+            <input type="radio" id="age3" name="age" value="100" onclick="validateregform()"/>
+            <label for="age3">60-100</label>
+            <span id="ageerror" class="errortxt">
+                please choose age
+            </span><br><br>
+            <input type="checkbox" id="agreeterms" name="agreeterms" onclick="validateregform()"/>
+            <label for="agreeterms">Please agree to the terms and condition</label><br>
+
+            <span  id="agreetermserror" class="errortxt">Please click on above checkbox</span>
+
+
+            <br><br>
+
+            <button type="submit"  value="submit">submit</button>
+        </form>
+    </body>
+</html>

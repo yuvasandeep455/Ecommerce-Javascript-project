@@ -1,0 +1,194 @@
+.e1{
+    background-color: blueviolet;
+    width:  auto;
+    height:120px ;
+}
+.e1 input{
+    width: 400px;
+    position: relative;
+    left:200px;
+    top:35px;
+    border-radius: 15px;
+    border: none;
+}
+.e1 i{
+    position: absolute;
+    left: 550px;
+    top: 41px;
+    color: blueviolet;
+}
+.bt1{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    border-radius: 10px;
+    width: 100px;
+    height:50px;
+    background-color: white;
+    color: blueviolet;
+    font-weight: bold;
+    border: none;
+    
+}
+.shoe{
+    font-size: medium;
+    color: blueviolet;
+}
+.offer{
+    color: red;
+}
+.description{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.store-products{
+    padding-top: 10px;
+}
+#btn-search{
+    position: relative;
+    left: 211px;
+    top: 35px;
+    
+    border-radius: 10px;
+    width: 70px;
+    height:30px;
+    background-color: rgb(243, 241, 241);
+    color: blueviolet;
+    font-weight: bold;
+    border: none;
+}
+.button-value{
+    /* background-color: #6759ff; */
+    position: relative;
+    left:200px;
+    top:40px;
+    border: 1px solid white;
+    padding: 2px 8px;
+    border-radius: 1em;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.active{
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+
+
+.tcb-product-slider {
+  background: #333;
+  background-image: url(https://unsplash.it/1240/530?image=721);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+.tcb-product-slider .carousel-control {
+  width: 5%;
+}
+.tcb-product-item a {
+  color: #147196;
+}
+.tcb-product-item a:hover {
+  text-decoration: none;
+}
+.tcb-product-item .tcb-hline {
+  margin: 10px 0;
+  height: 1px;
+  background: #ccc;
+}
+@media all and (max-width: 768px) {
+  .tcb-product-item {
+    margin-bottom: 30px;
+  }
+}
+.tcb-product-photo {
+  text-align: center;
+  height: 180px;
+  background: #fff;
+}
+.tcb-product-photo img {
+  height: 100%;
+  display: inline-block;
+}
+.tcb-product-info {
+  background: #f0f0f0;
+  padding: 15px;
+}
+.tcb-product-title h4 {
+  margin-top: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.tcb-product-rating {
+  color: #acacac;
+}
+.tcb-product-rating .active {
+  color: #FFB500;
+}
+.tcb-product-price {
+  color: firebrick;
+  font-size: 18px;
+}
+
+
+
+.details {
+    margin: 50px 0; }
+ .details h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 3px; }
+    .details .back-link {
+      text-align: center; }
+      .details .back-link a {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 15px 30px;
+        background: #333;
+        color: #fff;
+        border-radius: 24px; }
+        .details .back-link a svg {
+          margin-right: 10px;
+          vertical-align: text-top;
+          display: inline-block; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /* CSS used here will be applied after bootstrap.css */
+.carousel {
+    margin-top: 20px;
+}
+.item .thumb {
+	width: 25%;
+	cursor: pointer;
+	float: left;
+}
+.item .thumb img {
+	width: 100%;
+	margin: 2px;
+}
+.item img {
+	width: 100%;	
+}
